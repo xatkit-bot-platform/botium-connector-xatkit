@@ -6,8 +6,7 @@
   "module": "dist/botium-connector-xatkit-es.js",
   "scripts": {
     "build": "npm run eslint && rollup -c",
-    "eslint": "eslint index.js",
-    "test": "mocha tests/spec/ --exit"
+    "eslint": "eslint index.js"
   },
   "repository": {
     "type": "git",
@@ -40,7 +39,7 @@
     "socket.io-client": "^2.3.0"
   },
   "bugs": {
-    "url": "https://github.com/Naktibalda/botium-connector-botkit-xatkit/issues"
+    "url": "https://github.com/Naktibalda/botium-connector-xatkit/issues"
   },
   "homepage": "https://github.com/hamzaed/botium-connector-xatkit#readme",
   "keywords": [
