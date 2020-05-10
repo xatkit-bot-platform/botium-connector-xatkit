@@ -10,9 +10,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hamzaed/botium-connector-xatkit.git"
+    "url": "git+https://github.com/xatkit-bot-platform/botium-connector-xatkit.git"
   },
-  "author": "Hamza Ed-douibi <hamza.eddouibi@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -39,9 +38,9 @@
     "socket.io-client": "^2.3.0"
   },
   "bugs": {
-    "url": "https://github.com/Naktibalda/botium-connector-xatkit/issues"
+    "url": "https://github.com/xatkit-bot-platform/botium-connector-xatkit/issues"
   },
-  "homepage": "https://github.com/hamzaed/botium-connector-xatkit#readme",
+  "homepage": "https://github.com/xatkit-bot-platform/botium-connector-xatkit#readme",
   "keywords": [
     "botium",
     "xatkit",
