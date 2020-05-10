@@ -7,7 +7,6 @@
   "devDependencies": {
     "mocha": "latest",
     "botium-bindings": "latest",
-    "path": "^0.12.7",
     "botium-connector-xatkit": "../../"
   }
 }
