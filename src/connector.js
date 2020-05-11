@@ -51,9 +51,23 @@ class BotiumConnectorXatkit {
 
     this.socket.on('bot_message', (message) => {
       const messageText = message.message
-      if (messageText) {
-        debug('Bot says ' + messageText)
-        const botMsg = { sender: 'bot', sourceData: message, messageText }
+      const buttons = message.quickButtonValues && message.quickButtonValues.map(r => {
+        return {
+          text: r.label,
+          payload: r.value
+        }
+      })
+      if (messageText || buttons) {
+        if(messageText) {
+          debug('Bot says ' + messageText)
+        }
+        if(buttons && buttons.length > 0){
+          const buttonsText = buttons.map(b => {
+            return b.text
+          }).join(',')
+          debug('Bot displays buttons ' + buttonsText)
+        }
+        const botMsg = {sender: 'bot', sourceData: message, messageText, buttons}
         this.queueBotSays(botMsg)
       } else {
         debug('Bot message received without text: ' + message)
@@ -73,15 +87,25 @@ class BotiumConnectorXatkit {
     })
   }
 
-  async UserSays ({ messageText }) {
-    debug('User says ' + messageText)
-
-    const message = {
-      message: messageText,
-      username: 'test'
+  async UserSays ({ messageText, buttons }) {
+    if(buttons && buttons.length > 0){
+      const buttonPayload = buttons[0].payload
+      debug('User clicked on '+buttonPayload)
+      const message = {
+        selectedValue: buttonPayload,
+        username: 'test'
+      }
+      this.socket.emit('user_button_click', message)
     }
+    else {
+      debug('User wrote '+messageText)
+      const message = {
+        message: messageText,
+        username: 'test'
+      }
 
-    this.socket.emit('user_message', message)
+      this.socket.emit('user_message', message)
+    }
     return Promise.resolve()
   }
 
