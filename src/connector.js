@@ -89,10 +89,9 @@ class BotiumConnectorXatkit {
 
   async UserSays ({ messageText, buttons }) {
     if(buttons && buttons.length > 0){
-      const buttonPayload = buttons[0].payload
-      debug('User clicked on '+buttonPayload)
+      debug('User clicked on '+messageText)
       const message = {
-        selectedValue: buttonPayload,
+        selectedValue: messageText,
         username: 'test'
       }
       this.socket.emit('user_button_click', message)
