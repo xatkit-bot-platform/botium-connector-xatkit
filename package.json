@@ -6,7 +6,8 @@
   "module": "dist/botium-connector-xatkit-es.js",
   "scripts": {
     "build": "npm run eslint && rollup -c",
-    "eslint": "eslint index.js"
+    "eslint": "eslint index.js",
+    "test": "mocha tests/spec/ --exit"
   },
   "repository": {
     "type": "git",

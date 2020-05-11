@@ -1,0 +1,20 @@
+Success conversation
+
+#me
+Echo lou
+
+#bot
+lou
+
+#me
+Give me buttons
+
+#bot
+Select an option
+BUTTONS Option 1|Option 2
+
+#me
+BUTTON Option 1
+
+#bot
+Option 1 selected

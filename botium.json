@@ -1,0 +1,10 @@
+{
+  "botium": {
+    "Capabilities": {
+      "PROJECTNAME": "botium-connector-xatkit-sample",
+      "XATKIT_SERVER_URL": "http://localhost:5001"
+    },
+    "Sources": {},
+    "Envs": {}
+  }
+}
