@@ -1,0 +1,56 @@
+import library "TestBot/src/TestBot.intent" as TestBotLib
+import library "CoreLibrary"
+import platform "ReactPlatform"
+
+use provider ReactPlatform.ReactIntentProvider
+
+
+Init {
+	Next {
+		intent == Echo --> HandleEcho
+		intent == GiveMeAButton --> HandleGiveMeAButton
+	}
+}
+
+HandleEcho {
+	Body {
+		ReactPlatform.Reply(context.get("Echo").get('EchoValue') as String)
+	}
+	Next {
+		_ --> Init
+	}
+}
+
+
+HandleGiveMeAButton {
+	Body {
+		ReactPlatform.Reply("Select an option",#["Option 1","Option 2"])
+	}
+	Next {
+		intent == SelectButtonOne --> HandleSelectButtonOne
+		intent == SelectButtonTwo --> HandleSelectButtonTwo
+	}
+}
+
+HandleSelectButtonOne {
+	Body {
+		ReactPlatform.Reply("Option 1 selected")
+	}
+	Next {
+		_ --> Init
+	}
+}
+
+HandleSelectButtonTwo {
+	Body {
+		ReactPlatform.Reply("Option 2 selected")
+	}
+	Next {
+		_ --> Init
+	}
+}
+Default_Fallback {
+	Body {
+		ReactPlatform.Reply("Sorry I didn't get it")
+	}
+}
