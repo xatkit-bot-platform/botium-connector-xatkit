@@ -32,7 +32,7 @@ class BotiumConnectorXatkit {
     return Promise.resolve()
   }
 
-  async Start () {
+  Start () {
     debug('start called')
     let serverUrl = this.server
     let basePath = '/socket.io'
