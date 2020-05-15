@@ -1,8 +1,10 @@
 # Botium Connector for Xatkit
 
+[![NPM](https://nodei.co/npm/botium-connector-xatkit.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/botium-connector-dialogflow/)
+
 This is a [Botium](https://github.com/codeforequity-at/botium-core) connector for testing your Xatkit chatbot.
 
-## How it works ?
+## How it works?
 This connector connects to the endpoint of Xatkit server.
 
 It can be used as any other Botium connector with all Botium Stack components:
