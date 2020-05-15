@@ -1,12 +1,13 @@
 {
   "name": "botium-connector-xatkit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Botium Connector for Xatkit",
   "main": "dist/botium-connector-xatkit-cjs.js",
   "module": "dist/botium-connector-xatkit-es.js",
   "scripts": {
     "build": "npm run eslint && rollup -c",
     "eslint": "eslint index.js",
+    "eslint-fix": "eslint --fix index.js src/**.js",
     "test": "mocha tests/spec/ --exit"
   },
   "repository": {
@@ -37,6 +38,9 @@
   "dependencies": {
     "debug": "^4.1.1",
     "socket.io-client": "^2.3.0"
+  },
+  "peerDependencies": {
+    "botium-core": ">= 1.9.0"
   },
   "bugs": {
     "url": "https://github.com/xatkit-bot-platform/botium-connector-xatkit/issues"
