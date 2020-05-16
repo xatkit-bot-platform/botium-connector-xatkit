@@ -1,6 +1,6 @@
 # Botium Connector for Xatkit
 
-[![NPM](https://nodei.co/npm/botium-connector-xatkit.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/botium-connector-dialogflow/)
+[![NPM](https://nodei.co/npm/botium-connector-xatkit.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/botium-connector-xatkit/)
 
 This is a [Botium](https://github.com/codeforequity-at/botium-core) connector for testing your Xatkit chatbot.
 
