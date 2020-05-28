@@ -58,3 +58,13 @@ Create a botium.json with the URL of your Xatkit server in your project director
   }
 }
 ```
+
+## Note
+The `Client_Ready` event received by the Xatkit engine will contain the following context values:
+```
+{
+  'hostname': 'botium.xatkit', 
+  'url':'http://botium.xatkit', 
+  'origin': 'http://botium.xatkit'
+}
+```
