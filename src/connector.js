@@ -76,6 +76,7 @@ class BotiumConnectorXatkit {
 
     return new Promise((resolve, reject) => {
       this.socket.on('connect', function () {
+        socket.emit('init', {'hostname': 'botium.xatkit', 'url':'http://botium.xatkit', 'origin': 'http://botium.xatkit'})
         resolve()
       })
       this.socket.on('connect_error', function (err) {
