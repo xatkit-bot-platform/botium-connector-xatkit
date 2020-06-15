@@ -23,6 +23,6 @@ Option 1 selected
 Give me a link snippet with image
 
 #bot
-MEDIA | https://via.placeholder.com/150
+MEDIA https://via.placeholder.com/150
 title example > http://example.com
 
