@@ -1,6 +1,6 @@
 {
   "name": "botium-connector-xatkit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Botium Connector for Xatkit",
   "main": "dist/botium-connector-xatkit-cjs.js",
   "module": "dist/botium-connector-xatkit-es.js",
