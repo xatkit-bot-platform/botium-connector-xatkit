@@ -27,3 +27,8 @@ intent SelectButtonTwo {
 	}
 } 
 
+intent GiveMeALinkSnippetWithImage {
+	inputs {
+		"Give me a link snippet with image"
+	}
+}

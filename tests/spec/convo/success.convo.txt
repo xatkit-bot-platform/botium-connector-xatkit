@@ -18,3 +18,11 @@ BUTTON Option 1
 
 #bot
 Option 1 selected
+
+#me
+Give me a link snippet with image
+
+#bot
+MEDIA | https://via.placeholder.com/150
+title example > http://example.com
+
