@@ -58,16 +58,35 @@ class BotiumConnectorXatkit {
         }
       })
       if (messageText || buttons) {
-        if(messageText) {
+        if (messageText) {
           debug('Bot says ' + messageText)
         }
-        if(buttons && buttons.length > 0){
+        if (buttons && buttons.length > 0) {
           const buttonsText = buttons.map(b => {
             return b.text
           }).join(',')
           debug('Bot displays buttons ' + buttonsText)
         }
-        const botMsg = {sender: 'bot', sourceData: message, messageText, buttons}
+        const botMsg = { sender: 'bot', sourceData: message, messageText, buttons }
+        this.queueBotSays(botMsg)
+      } else {
+        debug('Bot message received without text: ' + message)
+      }
+    })
+
+    this.socket.on('link_snippet_with_img', (message) => {
+      const { title, link, img } = message
+      if (title && link && img) {
+        debug('Bot sent link snippet with img', title, link, img)
+        const messageText = `${title} > ${link}`
+        const sourceData = `Link snippet with image: title: ${title}, link ${link}, image ${img}`
+        const media = [
+          {
+            mediaUri: img
+          }
+        ]
+        debug('Bot sent link snippet with img', title, link, img)
+        const botMsg = { sender: 'bot', sourceData, messageText, media }
         this.queueBotSays(botMsg)
       } else {
         debug('Bot message received without text: ' + message)
@@ -76,7 +95,7 @@ class BotiumConnectorXatkit {
 
     return new Promise((resolve, reject) => {
       this.socket.on('connect', function () {
-        socket.emit('init', {'hostname': 'botium.xatkit', 'url':'http://botium.xatkit', 'origin': 'http://botium.xatkit'})
+        socket.emit('init', { hostname: 'botium.xatkit', url: 'http://botium.xatkit', origin: 'http://botium.xatkit' })
         resolve()
       })
       this.socket.on('connect_error', function (err) {
@@ -88,17 +107,16 @@ class BotiumConnectorXatkit {
     })
   }
 
-  async UserSays ({ messageText, buttons }) {
-    if(buttons && buttons.length > 0){
-      debug('User clicked on '+messageText)
+  UserSays ({ messageText, buttons }) {
+    if (buttons && buttons.length > 0) {
+      debug('User clicked on ' + messageText)
       const message = {
         selectedValue: messageText,
         username: 'test'
       }
       this.socket.emit('user_button_click', message)
-    }
-    else {
-      debug('User wrote '+messageText)
+    } else {
+      debug('User wrote ' + messageText)
       const message = {
         message: messageText,
         username: 'test'
