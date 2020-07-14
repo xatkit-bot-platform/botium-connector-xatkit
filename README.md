@@ -42,7 +42,7 @@ When using __Botium Box__:
 
 TODO
 
-## Connecting your Botkit server to Botium
+## Connecting your Xatkit server to Botium
 
 Create a botium.json with the URL of your Xatkit server in your project directory:
 
