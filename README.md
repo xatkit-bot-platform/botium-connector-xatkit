@@ -51,7 +51,7 @@ Create a botium.json with the URL of your Xatkit server in your project director
 {
   "botium": {
     "Capabilities": {
-      "PROJECTNAME": "Botim project Xatkit",
+      "PROJECTNAME": "Botium project Xatkit",
       "CONTAINERMODE": "xatkit",
       "XATKIT_SERVER_URL": "<URL of the Xatkit server>"
     }
