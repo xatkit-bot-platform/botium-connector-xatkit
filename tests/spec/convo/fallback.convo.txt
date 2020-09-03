@@ -4,4 +4,4 @@ Fallback conversation
 coucou
 
 #bot
-Sorry I didn't get it
+Sorry, I didn't get it
