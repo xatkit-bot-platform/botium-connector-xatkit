@@ -31,7 +31,6 @@ public class EchoBot {
                 .trainingSentence("Echo text")
                 .context("Echo")
                 .parameter("EchoValue").fromFragment("text").entity(any());
-            
 
         val giveMeButtons = intent("GiveMeButtons")
                 .trainingSentence("Give me buttons");
@@ -100,7 +99,7 @@ public class EchoBot {
 
 
         val defaultFallback = fallbackState()
-                .body(context -> reactPlatform.reply(context, "Sorry, I didn't, get it"));
+                .body(context -> reactPlatform.reply(context, "Sorry, I didn't get it"));
 
         val botModel = model()
                 .useEvent(echo)
