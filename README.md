@@ -59,6 +59,8 @@ Create a botium.json with the URL of your Xatkit server in your project director
 }
 ```
 
+## Example
+Check the greetings example located at the folder [samples/greetings](./samples/greetings).
 ## Note
 The `Client_Ready` event received by the Xatkit engine will contain the following context values:
 ```
