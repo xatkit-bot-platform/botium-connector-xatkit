@@ -40,7 +40,7 @@ When using __Botium Bindings__:
 
 When using __Botium Box__:
 
-TODO
+_Already integrated into Botium Box, no setup required._
 
 ## Connecting your Xatkit server to Botium
 
