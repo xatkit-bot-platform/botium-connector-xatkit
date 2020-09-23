@@ -8,6 +8,7 @@ botiumwork/
 .eslintignore
 logo.svg
 rollup.config.js
+botium.json
 
 package-lock.json
 yarn.lock
